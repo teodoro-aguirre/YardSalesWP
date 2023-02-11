@@ -24,14 +24,25 @@ add_action("wp_body_open", "plz_analytics");
 function plz_theme_supports(){
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
-    add_theme_support('custom-logo', 
-    array(
+    add_theme_support('custom-logo', array(
         "width" => 170,
         "height" => 35,
         "flex-width" => true,
         "flex-height" => true,
-    )
-    );
+    ));
 }
 
 add_action("after_setup_theme", "plz_theme_supports");
+
+
+// Funciom para agregar el menu
+function plz_add_menus(){
+    register_nav_menus(
+        array(
+        'menu-principal' => "Menu Principal",
+        'menu-responsive' => "Menu Responsive"
+        )
+    );
+}
+
+add_action("after_setup_theme", "plz_add_menus");
