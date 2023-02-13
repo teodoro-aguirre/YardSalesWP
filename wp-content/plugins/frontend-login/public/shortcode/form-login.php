@@ -17,7 +17,7 @@ function plz_add_login_form(){
                     <input type="submit" value="Log in">
                 </div>
                 <div class="signin_create-link">
-                    <a href="/sign_up.html">Sign up</a>
+                    <a href="'.home_url("registro").'">Registro</a>
                 </div>
             </form>
         </div>
